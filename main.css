@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/bg-mobile.png);
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-color: hsl(229, 57%, 11%);
+  }
+  main {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+  }
+}
+main > div {
+  background-color: hsl(228, 56%, 26%);
+}
+main .options {
+  padding: 40px 100px 10px 40px;
+  margin-bottom: 15px;
+  border-radius: 10px 100px 10px 10px;
+}
+@media (min-width: 991px) {
+  main .options {
+    width: 350px;
+  }
+}
+main .options img {
+  margin-bottom: 30px;
+}
+main .options ul {
+  display: flex;
+  list-style: none;
+  column-gap: 20px;
+}
+main .options ul li img {
+  background-color: hsl(229, 57%, 11%);
+  padding: 12px 13px;
+  border-radius: 10px;
+}
+main .options ul li:nth-of-type(2) img {
+  padding: 14px 13px;
+}
+main .options ul li:nth-of-type(3) img {
+  padding: 16px 13px;
+}
+main .storage {
+  padding: 30px 40px 50px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+@media (min-width: 768px) {
+  main .storage {
+    padding: 40px 40px 30px;
+    text-align: start;
+    margin-top: 22px;
+    font-size: 17px;
+  }
+}
+@media (min-width: 991px) {
+  main .storage {
+    width: 560px;
+  }
+}
+main .storage p {
+  color: hsl(243deg 100% 93% / 90%);
+}
+main .storage > p span {
+  color: hsl(243deg 100% 93%);
+  font-weight: 700;
+}
+main .storage .usage {
+  position: relative;
+  background-color: hsl(229deg 57% 11% / 50%);
+  height: 20px;
+  margin: 20px 0px 10px;
+  border-radius: 10px;
+}
+main .storage .usage::before,
+main .storage .usage::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .storage .usage::before {
+  left: 3px;
+  width: 72%;
+  height: 14px;
+  background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 10px;
+}
+main .storage .usage::after {
+  left: 68.5%;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 50%;
+}
+@media (min-width: 991px) {
+  main .storage .usage::after {
+    left: 70%;
+  }
+}
+main .storage .usage + div {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .storage .storage-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 170px;
+  padding: 15px 0px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  main .storage .storage-left {
+    top: -50px;
+    right: 75px;
+    transform: translateX(0px);
+    bottom: initial;
+    left: initial;
+  }
+}
+@media (min-width: 991px) {
+  main .storage .storage-left {
+    right: 40px;
+  }
+  main .storage .storage-left::after {
+    position: absolute;
+    content: "";
+    top: 53px;
+    right: 0px;
+    border: 25px solid;
+    border-color: transparent white transparent transparent;
+  }
+}
+main .storage .storage-left p:first-of-type {
+  color: hsl(229, 57%, 11%);
+  font-size: 43px;
+}
+main .storage .storage-left p:last-of-type {
+  color: hsl(229, 7%, 55%);
+  text-transform: uppercase;
+  padding-top: 6px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
